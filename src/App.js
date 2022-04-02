@@ -41,9 +41,11 @@ export default function App() {
     alanBtn({
       key: '811794270532c7ccbd6776a8f5ea9de62e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: (commandData) => {
-        const updatedNotes = { ...commandData, id: notes.length + 1 };
-        addNotes((prevNotes) => prevNotes.concat(updatedNotes));
-        console.log('data', commandData);
+        addNotes((prevNotes) => {
+          const updatedNotes = { ...commandData, id: prevNotes.length + 1 };
+          return prevNotes.concat(updatedNotes);
+        });
+        console.log('data', notes);
       },
     });
   }, []);
