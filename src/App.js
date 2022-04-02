@@ -24,11 +24,12 @@ export default function App() {
   ];
 
   const [notes, addNotes] = useState(initialState);
+  const [search, setSearch] = useState('');
   return (
     <div className="container-fluid">
-      <Navbar theme={'light'} />
+      <Navbar theme={'light'} setSearch={setSearch} />
       <br />
-      <Notes notes={notes} addNotes={addNotes} />
+      <Notes notes={notes} addNotes={addNotes} search={search} />
       <AddNotes addNotes={addNotes} />
     </div>
   );

@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default function Navbar({ theme }) {
+export default function Navbar({ theme, setSearch }) {
+  function handleSearch(e) {
+    setSearch(e.target.value);
+  }
   return (
     <nav className={`navbar navbar-${theme} bg-${theme}`}>
       <a className="navbar-brand">Navbar</a>
@@ -12,6 +15,7 @@ export default function Navbar({ theme }) {
               type="search"
               placeholder="Search Notes..."
               aria-label="Search"
+              onChange={handleSearch}
             />
           </div>
         </div>
