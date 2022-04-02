@@ -42,7 +42,10 @@ export default function App() {
       key: '811794270532c7ccbd6776a8f5ea9de62e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: (commandData) => {
         addNotes((prevNotes) => {
-          const updatedNotes = { ...commandData, id: prevNotes.length + 1 };
+          const updatedNotes = {
+            ...commandData,
+            id: prevNotes[prevNotes.length-1].id + 1,
+          };
           return prevNotes.concat(updatedNotes);
         });
         console.log('data', notes);

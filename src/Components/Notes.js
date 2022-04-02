@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Notes({ notes, addNotes, search }) {
+  console.log(notes);
   function handleDelete(note) {
     const updatedNotes = notes.filter((n) => n.id !== note.id);
     addNotes(updatedNotes);
