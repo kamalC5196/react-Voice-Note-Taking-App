@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Modal from 'react-bootstrap/Modal';
 function AddNotes({ addNotes }) {
   const formRef = useRef();
 
@@ -40,7 +41,7 @@ function AddNotes({ addNotes }) {
             placeholder="Notes"
           />
         </div>
-        <button type="submit" className="btn btn-primary mb-2 col-sm-2">
+        <button type="submit" className="btn btn-primary mb-2 col-sm-3">
           Add Note
         </button>
       </div>

@@ -8,7 +8,10 @@ function Notes({ notes, addNotes, search }) {
   if (!notes.length)
     return <h2 className="text-center">No Notes to display</h2>;
   return (
-    <div className="row">
+    <div
+      className="row"
+      style={{ maxHeight: 'calc(100vh-30px)', overflowY: 'scroll' }}
+    >
       {notes.map(
         (note) =>
           (note.title.toLowerCase().includes(search.toLowerCase()) ||
