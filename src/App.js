@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
-import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/Navbar';
 import Notes from './Components/Notes';
@@ -27,15 +26,7 @@ export default function App() {
 
   const [notes, addNotes] = useState(initialState);
   const [search, setSearch] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-
-  const showModal = () => {
-    setIsOpen(true);
-  };
-
-  const hideModal = () => {
-    setIsOpen(false);
-  };
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     alanBtn({
@@ -44,7 +35,7 @@ export default function App() {
         addNotes((prevNotes) => {
           const updatedNotes = {
             ...commandData,
-            id: prevNotes[prevNotes.length-1].id + 1,
+            id: prevNotes[prevNotes.length - 1].id + 1,
           };
           return prevNotes.concat(updatedNotes);
         });
@@ -56,6 +47,8 @@ export default function App() {
   return (
     <div className="container-fluid">
       <Navbar theme={'light'} setSearch={setSearch} />
+      <br />
+      <br />
       <br />
       <Notes notes={notes} addNotes={addNotes} search={search} />
       <AddNotes addNotes={addNotes} />

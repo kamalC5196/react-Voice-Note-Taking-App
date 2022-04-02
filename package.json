@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@alan-ai/alan-sdk-web": "^1.8.31",
-    "@popperjs/core": "^2.10.2",
-    "bootstrap": "^5.1.3",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.2.2",
-    "react-dom": "^17.0.2"
+    "@alan-ai/alan-sdk-web": "1.8.31",
+    "@popperjs/core": "2.11.4",
+    "bootstrap": "5.1.3",
+    "react": "17.0.2",
+    "react-bootstrap": "2.2.2",
+    "react-dom": "17.0.2",
+    "react-transition-group": "^4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

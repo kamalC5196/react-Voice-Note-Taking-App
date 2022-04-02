@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Modal from 'react-bootstrap/Modal';
+
 function AddNotes({ addNotes }) {
   const formRef = useRef();
 

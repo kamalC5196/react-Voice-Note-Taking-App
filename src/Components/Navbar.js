@@ -5,7 +5,7 @@ export default function Navbar({ theme, setSearch }) {
     setSearch(e.target.value);
   }
   return (
-    <nav className={`navbar navbar-${theme} bg-${theme}`}>
+    <nav className={`navbar navbar-${theme} bg-${theme} fixed-top`}>
       <a className="navbar-brand">Navbar</a>
       <form className="form-inline">
         <div className="row">
