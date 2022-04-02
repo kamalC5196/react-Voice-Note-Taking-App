@@ -27,7 +27,7 @@ function AddNotes({ addNotes }) {
           <input
             type="text"
             readonly
-            className="form-control"
+            className="form-control border border-primary"
             id="noteTitle"
             placeHolder="Note Title"
           />
@@ -35,7 +35,7 @@ function AddNotes({ addNotes }) {
         <div className="col-sm-5">
           <input
             type="text"
-            className="form-control"
+            className="form-control border border-primary"
             id="noteNote"
             placeholder="Notes"
           />

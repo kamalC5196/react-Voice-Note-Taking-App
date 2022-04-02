@@ -28,7 +28,7 @@ export default function App() {
     <div className="container-fluid">
       <Navbar theme={'light'} />
       <br />
-      <Notes notes={notes} />
+      <Notes notes={notes} addNotes={addNotes} />
       <AddNotes addNotes={addNotes} />
     </div>
   );

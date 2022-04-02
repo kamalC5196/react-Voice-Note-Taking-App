@@ -1,7 +1,12 @@
 import React from 'react';
 
-function Notes({ notes }) {
-  console.log(notes);
+function Notes({ notes, addNotes }) {
+  function handleDelete(note) {
+    const updatedNotes = notes.filter((n) => n.id !== note.id);
+    addNotes(updatedNotes);
+  }
+  if (!notes.length)
+    return <h2 className="text-center">No Notes to display</h2>;
   return (
     <div className="row">
       {notes.map((note) => (
@@ -13,7 +18,13 @@ function Notes({ notes }) {
           <div className="card-body">
             <h5 className="card-title">{note.title}</h5>
             <p className="card-text my-3">{note.note}</p>
-            <a href="#" className="btn btn-danger">
+            <a
+              href="#"
+              className="btn btn-danger"
+              onClick={() => {
+                handleDelete(note);
+              }}
+            >
               Delete Note
             </a>
           </div>
