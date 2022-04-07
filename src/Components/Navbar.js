@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Navbar({ theme, setSearch }) {
   function handleSearch(e) {
@@ -6,7 +6,7 @@ export default function Navbar({ theme, setSearch }) {
   }
   return (
     <nav className={`navbar navbar-${theme} bg-${theme} fixed-top`}>
-      <a className="navbar-brand">Navbar</a>
+      <a className="navbar-brand">NOTEBOOK</a>
       <form className="form-inline">
         <div className="row">
           <div className="col-sm-12">
